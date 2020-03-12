@@ -112,7 +112,7 @@ class Blockchain(object):
         guess = f"{block_string}{proof}".encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         # return True or False
-        return guess_hash[:difficulty] == "000" * 3
+        return guess_hash[:difficulty] == "0" * difficulty
 
 
 # Instantiate our Node
